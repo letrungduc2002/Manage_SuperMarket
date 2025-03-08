@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Dropdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            background: #0074E4;
+            padding: 10px;
+        }
+        .nav-item {
+            position: relative;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-item i {
+            margin-right: 8px;
+        }
+        .nav-item:hover {
+            background: #005bb5;
+        }
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: #005bb5;
+            display: none;
+            flex-direction: column;
+            width: 180px;
+            border-radius: 5px;
+        }
+        .dropdown a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown a i {
+            margin-right: 8px;
+        }
+        .dropdown a:hover {
+            background: #003f80;
+        }
+        .nav-item:hover .dropdown {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="nav-item"><i class="fas fa-eye"></i> Tổng quan</a>
+        <!--Phần tổng quan này sẽ hiển thị ra doanh thu teo tháng và sản phẩm ban chạy, sản phẩm lợi nhuận cao nhất-->
+        <div class="nav-item">
+        <i class="fas fa-box"></i> Nhân viên
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-th"></i>Quản lý nhân viên</a>
+                <a href="#"><i class="fas fa-tags"></i> Thêm nhân viên</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Xóa nhân viên</a>
+            </div>
+        </div>
+        <div class="nav-item">
+        <i class="fas fa-box"></i> Sản phẩm
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-th"></i>Thêm</a>
+                <a href="#"><i class="fas fa-tags"></i> Xóa </a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Sửa</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Tìm kiếm sản phẩm</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Lọc sản phẩm theo giá bán</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Điều chỉnh giá bán</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Sản phẩm sắp hết hàng</a>
+                
+                
+            </div>
+        </div>
+        <div class="nav-item">
+        <i class="fas fa-box"></i> Bán Hàng
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-tags"></i> Đơn hàng </a>
+                <a href="#"><i class="fas fa-tags"></i> Thanh toán </a>
+                <a href="#"><i class="fas fa-tags"></i> Khách hàng mua nhiều nhất </a>
+                <!--Lọc theo tuần tháng-->
+            </div>
+        </div>
+        <div class="nav-item">
+        <i class="fas fa-box"></i> Kho hàng
+            <div class="dropdown">
+                <a href="#"><i class="fas fa-th"></i>Sản phẩm còn lại trong kho</a>
+                <a href="#"><i class="fas fa-tags"></i> Sản phẩm của nhà cung cấp </a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> Sản phẩm cận date</a>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
